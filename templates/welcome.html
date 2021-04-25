@@ -36,7 +36,10 @@
     .site-head a {
       margin-top: 30px;
       margin-left: 35%;
-      
+    }
+
+    .card-body p {
+      font-size: 20px;
     }
     .down-arrow {
       margin-top: 3.5em;
@@ -45,10 +48,14 @@
       background-color: #EDDCEF;
     }
     .card2 {
-      background-color: #CEA1D4;
+      background-color: #e3c0e8;
     }
     .card3 {
-      background-color: #B56DBD;
+      background-color: #c890cf;
+    }
+    span {
+      padding: 0 10px 0 10px;
+      
     }
   </style>
 
@@ -90,7 +97,7 @@
 
     <div class = "jumbotron text-center" > 
       <div class = "card-deck container">
-        <div class = "card">
+        <div  data-aos="fade-right" data-aos-duration="1000"  class = "card">
           <div class = "card-body site-head">
             <div class = "">
               <h1 class = "" >Classify</h1>
@@ -102,7 +109,7 @@
           </div>
           
         </div>
-        <div class = "card">
+        <div data-aos="fade-left" data-aos-duration="1000" class = "card">
 
           <img class = "img-fluid"  src ="static/Images/main.png">
         </div> 
@@ -115,15 +122,19 @@
     <div class = "card"> 
       <div class = "card-header">
         <div class = "card-title text-center">
-            <h2 >A new way to learn</h2>
+            <h1><span style = "background-color: purple; color: white;"> A new way to learn </span></h1>
         </div>
       </div>
     </div>
     <!---------------------->
-    <div data-aos="flip-up" data-aos-duration="1000"  class = "card-deck">
+    <div data-aos="fade-in" data-aos-duration="1000"  class = "card-deck">
       <div class = "card card1">
         <div class = "card-body">
-          <p>Reason 1</p>
+          <p>There are approximately 4.4 million children from ages 3-17 diagnosed with anxiety
+            in the United States. The millions of school-aged children who experience anxiety
+            often list school as one of the main causes. How can we reduce the burden schoolwork
+            places on students?
+          </p> 
         </div>
       </div>
     
@@ -131,25 +142,77 @@
     
       <div class = "card card2">
         <div class = "card-body">
-          <p>Reason 2</p>
+          <p>Everyone knows the age old scenario: there are 3 basic requirements for a 
+            high school student's success --> good grades, a social life, and enough. However,
+            you can only pick two. With Classify, we're working to change that by creating a 
+            dynamic scheduling service designed for and by students.
+          </p> 
         </div>
       </div>
     <!---------------------->
     
       <div class = "card card3">
         <div class = "card-body">
-          <p>Reason 3</p>
+          <p>Students can easily enter their daily information into a form. Then, Classify's 
+            web application will generate a dynamic schedule for them - complete with timing, breaks,
+            and auto-pauses for students to relax and stretch. We've incorporated timing functions
+            in so students can track the time they've spent on each activity.
+          </p> 
         </div>
       </div>
   </div>
   <br>
+
+  <button onClick="GFG_Fun()">
+    click here
+</button>
+<p id="GFG_DOWN"></p>
+<script>
+    var down = document.getElementById("GFG_DOWN");
+    function GFG_Fun() {
+        
+        // Create a form synamically
+        var form = document.createElement("form");
+        form.setAttribute("method", "post");
+        form.setAttribute("action", "submit.php");
+
+        // Create an input element for emailID
+        var ID = document.createElement("input");
+        ID.setAttribute("type", "text");
+        ID.setAttribute("name", "emailID");
+        ID.setAttribute("placeholder", "E-Mail ID");
+
+        // Create an input element for password
+        var PWD = document.createElement("input");
+        PWD.setAttribute("type", "password");
+        PWD.setAttribute("name", "password");
+        PWD.setAttribute("placeholder", "Password");
+
+        // Create a submit button
+        var s = document.createElement("input");
+        s.setAttribute("type", "submit");
+        s.setAttribute("value", "Submit");
+
+        // Append the email_ID input to the form
+        form.append(ID); 
+        
+        // Append the password to the form
+        form.append(PWD); 
+        
+        // Append the button to the form
+        form.append(s); 
+
+        document.getElementsByTagName("body")[0]
+       .appendChild(form);
+    }
+</script>
     <div class = "container">
       <div class = "card-deck">
         <div class = "card"> 
             <div class = "card-header">
                 <br>
                 <div class = "card-title">
-                    <h2 class = "container">Welcome to Classify</h2>
+                  <h1><span style = "background-color: #dc91e1"> Welcome to Classify</span></h1>
                 </div>
             </div>
             <div class = "container">
@@ -166,11 +229,122 @@
             </div>
         </div>
         <div class="card">
-            
-          <img class = "img-fluid" src= "">
+          <br>
+          <img class = "img-fluid" src= "static/Images/purple1.png" width = "550">
         </div>
       </div>
     </div>
+
+    <div data-aos="fade-in" data-aos-duration="1500" class = "card bg-light">
+      <div class = "card-header">
+          <br>
+          <div class = "card-title">
+              <h2 class = "container">Fill out this form to get started</h2>
+          </div>
+      </div>
+      <div class = "card-body">
+          <div class = "container">
+              <form name="MathCourse" id="form1" action="/session.html">
+              <br>
+              <!--GRADE-->
+              <div>
+                  <h5>Please select your current grade:</h5>
+                  <hr>
+                  <div class = "form-check" > 
+                      <input type="radio" id="grade8" name="grade" value=8 required>
+                      <label  for="grade9">Grade 8</label>
+                      <input type="radio" id="grade9" name="grade" value=9 required>
+                      <label for="grade9">Grade 9</label>
+                      <input type="radio" id="grade10" name="grade" value=10 required>
+                      <label for="grade9">Grade 10</label>
+                      <input type="radio" id="grade11" name="grade" value=11 required>
+                      <label for="grade11">Grade 11</label>
+                      <input type="radio" id="grade12" name="grade" value=12 required>
+                      <label for="grade12">Grade 12</label><br>
+                  </div>
+              </div>
+              <br>
+
+              <!--PREVIOUS COURSES-->
+              <div> 
+              <h5>Please select all of the math courses you have taken, including your current course:</h5>
+              <hr>
+              <div class = "form-check" > 
+                  <div class = "form-row">
+                      <div class = "form-group col-md-4"> 
+                          <input type="checkbox" id="Course3" name="Course3" value="Course3" >
+                          <label for="Course3"> Course 3</label><br>
+
+                          <input type="checkbox" id="Algebra1A" name="Algebra1A" value="Algebra1A" >
+                          <label for="Algebra1A"> Algebra 1A </label><br>
+
+                          <input type="checkbox" id="Algebra1" name="Algebra1" value="Algebra1" >
+                          <label for="Algebra1"> Algebra 1 </label><br>
+                          
+                          <input type="checkbox" id="AdvancedAlgebra" name="AdvancedAlgebra" value="AdvancedAlgebra" >
+                          <label for="AdvancedAlgebra"> Advanced Algebra </label><br>
+                          
+                          <input type="checkbox" id="Geometry" name="Geometry" value="Geometry" >
+                          <label for="Geometry"> Geometry</label><br>
+
+                          <input type="checkbox" id="AdvancedGeometry" name="AdvancedGeometry" value="AdvancedGeometry" >
+                          <label for="AdvancedGeometry"> Advanced Geometry </label><br>
+                          
+                          <input type="checkbox" id="Algebra2" name="Algebra2" value="Algebra2" >
+                          <label for="Algebra2"> Algebra 2 </label><br>
+                          
+                          <input type="checkbox" id="AdvancedAlgebra2" name="AdvancedAlgebra2" value="AdvancedAlgebra2" >
+                          <label for="AdvancedAlgebra2"> Advanced Algebra 2 </label><br>
+                          <!--
+                          <input type="checkbox" id="AdvAlgebra2" name="AdvAlgebra2" value="AdvAlgebra2" >
+                          <label for="AdvAlgebra2"> Adv. Algebra 2 </label><br>-->
+                      </div> 
+                      <div class = "form-group col-md-4"> 
+                          <input type="checkbox" id="Statistics" name="Statistics" value="Statistics" >
+                          <label for="Statistics"> Statistics </label><br>
+                          
+                          <input type="checkbox" id="Trigonometry" name="Trigonometry" value="Trigonometry" >
+                          <label for="Trigonometry"> Trigonometry </label><br>
+                          
+                          <input type="checkbox" id="PreCalculus" name="PreCalculus" value="PreCalculus" >
+                          <label for="PreCalculus"> PreCalculus </label><br>
+                          
+                          <input type="checkbox" id="PersonalFinance" name="PersonalFinance" value="PersonalFinance" >
+                          <label for="PersonalFinance"> Personal Finance </label><br>
+                          
+                          <input type="checkbox" id="Calculus" name="Calculus" value="Calculus" >
+                          <label for="Calculus"> Calculus </label><br>
+
+                          <input type="checkbox" id="APstatistics" name="APstatistics" value="APstatistics">
+                          <label for="APstatistics"> AP Statistics </label><br>
+                          
+                          <input type="checkbox" id="APCalculusAB" name="APCalculusAB" value="APCalculusAB" >
+                          <label for="APCalculusAB"> AP Calculus AB </label><br>
+                          
+                          <input type="checkbox" id="APCalculusBC" name="APCalculusBC" value="APCalculusBC" >
+                          <label for="APCalculusBC"> AP Calculus BC </label><br>
+                      </div>
+                  </div>
+              </div>
+              </div>
+              <br>
+              
+              <!--ALERT AND BUTTONS-->
+                
+              <div class="alert alert-warning col-md-6 " role="alert">
+                  You must click <strong>"Submit"</strong> or <strong>"Reset"</strong> 
+                  each time you fill out this form. 
+              </div>
+
+              <input class="btn btn-success" type="submit" value="Submit" >
+              <input class="btn btn-danger"  type="reset" >
+              
+              </form>
+          </div>
+      </div>
+      <br>
+      <br>
+  </div>
 
   </body>
 </html>
