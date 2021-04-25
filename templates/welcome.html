@@ -45,18 +45,44 @@
       margin-top: 3.5em;
     }
     .card1 { 
-      background-color: #EDDCEF;
+      background-color: #f9e8fb;
     }
     .card2 {
-      background-color: #e3c0e8;
+      background-color: #f9e0fc;
     }
     .card3 {
-      background-color: #c890cf;
+      background-color: #deb8e3;
     }
     span {
       padding: 0 10px 0 10px;
       
     }
+    .image-card {
+      
+        background-image: linear-gradient(
+                rgba(0, 0, 0, 0.1),
+                rgba(0, 0, 0, 0)
+                ), url("static/Images/purple2.jpg");
+        background-attachment: fixed;
+        background-position: right;
+        background-repeat: no-repeat;
+        display: 50%;
+        background-size: cover;
+        
+    }
+
+    .overlay-content {
+            background-color: #C88092;
+            
+            overflow: hidden;
+            
+            max-width: 50%;
+            padding: 0 25px 0 20px;
+            
+        }
+
+    /*To start virtual environent, do source venv/bin/activate
+    and then python app.py to start localhost*/
   </style>
 
   <body>
@@ -127,7 +153,7 @@
       </div>
     </div>
     <!---------------------->
-    <div data-aos="fade-in" data-aos-duration="1000"  class = "card-deck">
+    <div data-aos="flip-up" data-aos-duration="1000"  class = "card-deck">
       <div class = "card card1">
         <div class = "card-body">
           <p>There are approximately 4.4 million children from ages 3-17 diagnosed with anxiety
@@ -143,9 +169,9 @@
       <div class = "card card2">
         <div class = "card-body">
           <p>Everyone knows the age old scenario: there are 3 basic requirements for a 
-            high school student's success --> good grades, a social life, and enough. However,
+            high school student's success --> good grades, a social life, and enough sleep. However,
             you can only pick two. With Classify, we're working to change that by creating a 
-            dynamic scheduling service designed for and by students.
+            <b>dynamic</b> scheduling service designed for and by students.
           </p> 
         </div>
       </div>
@@ -161,11 +187,12 @@
         </div>
       </div>
   </div>
-  <br>
+  <br><br><br>
 
+  <!--NEW SECTION HEADER-->
     <div class = "container">
       <div class = "card-deck">
-        <div class = "card"> 
+        <div data-aos="fade-right" data-aos-duration="1000" class = "card"> 
             <div class = "card-header">
                 <br>
                 <div class = "card-title">
@@ -185,14 +212,17 @@
                 </div>
             </div>
         </div>
-        <div class="card">
+        <div data-aos="fade-left" data-aos-duration="1000" class="card">
           <br>
           <img class = "img-fluid" src= "static/Images/purple1.png" width = "550">
         </div>
       </div>
     </div>
 
-    <div data-aos="fade-in" data-aos-duration="1500" class = "card card1">
+    <br><br><br>
+  <!-- NEW SECTION WITH FORM-->
+    <div data-aos="fade-in" data-aos-duration="1500" class = " container ">
+      <div class = "card card1">
       <div class = "card-header">
           
           <div class = "card-title">
@@ -254,11 +284,19 @@
               <button class="btn btn-success" onclick="setTimeout(myFunction, 3000)">Submit</button>
           </div>
       </div>
+      </div>
       <br>
       <br>
   </div>
-<br>
-  <div class = "card card2 container" >
+<br><br>
+
+<!--ANOTHER SECTION-->
+<div class = "container card-deck">
+  <div class  = "card image-card">
+    
+      
+  </div>
+  <div class = "card">
 
     <div class = "card-header" >
       <br>
@@ -273,49 +311,27 @@
         <p>AP PHYSICS: Take and grade Exam #102 provided on the agenda.</p>
         <br>
         <h4>You're currently STUDYING.</h4>
-      </div>
     </div>
+  </div>
 
-<script>
-function myFunction() {
-  alert('It has been twenty minutes! The Pomodoro method of studying says that you should take a break now and stretch.');
-}
-</script>
+      <script>
+      function myFunction() {
+        alert('It has been twenty minutes! The Pomodoro method of studying says that you should take a break now and stretch.');
+      }
+      </script>
+  </div>
+<br><br><br>
+<footer class = "jumbotron jumbotron-footer text-center">
+    
+  <ul class="social list-inline">
+              
+      <li class="list-inline-item"><a href="mailto:forevergrace.15@gmail.com" class="social-link"><i class="fas fa-envelope fa-2x"></i></a></li>
+      <!--<li class="list-inline-item"><a href="https://www.instagram.com/dhs.girlsmathassociation/" class="social-link"><i class="fab fa-instagram fa-3x"></i></a></li>-->
+      <li class="list-inline-item"><a href="#"class= "social-link"><i class="fab fa-linkedin fa-2x"></i></a></li>
+      <li class="list-inline-item"><a href="#" class="social-link"><i class="fas fa-share fa-2x"></i></a></li>
 
-<!--
-<div id="ten-countdown" onclick = "countdown( "ten-countdown", 10, 0 )"></div>-->
-
-<!--
-<script>
-function countdown( elementName, minutes, seconds )
-{
-    var element, endTime, hours, mins, msLeft, time;
-
-    function twoDigits( n )
-    {
-        return (n <= 9 ? "0" + n : n);
-    }
-
-    function updateTimer()
-    {
-        msLeft = endTime - (+new Date);
-        if ( msLeft < 1000 ) {
-            element.innerHTML = "Time is up!";
-        } else {
-            time = new Date( msLeft );
-            hours = time.getUTCHours();
-            mins = time.getUTCMinutes();
-            element.innerHTML = (hours ? hours + ':' + twoDigits( mins ) : mins) + ':' + twoDigits( time.getUTCSeconds() );
-            setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
-        }
-    }
-
-    element = document.getElementById( elementName );
-    endTime = (+new Date) + 1000 * (60*minutes + seconds) + 500;
-    updateTimer();
-}
-</script>-->
-
-<br><br>
+  </ul>
+  <p class = "specialfont2" style = "color:black;">Created by Grace Liu and Ria Jain © 2021</p>
+</footer>
   </body>
 </html>
