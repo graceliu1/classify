@@ -57,6 +57,10 @@
       padding: 0 10px 0 10px;
       
     }
+    .card img {
+      background-attachment: fixed;
+        background-repeat: no-repeat;
+    }
     .image-card {
       
         background-image: linear-gradient(
@@ -64,10 +68,9 @@
                 rgba(0, 0, 0, 0)
                 ), url("static/Images/purple2.jpg");
         background-attachment: fixed;
-        background-position: right;
         background-repeat: no-repeat;
-        display: 50%;
-        background-size: cover;
+        
+        background-size: contain;
         
     }
 
@@ -129,7 +132,7 @@
               <h1 class = "" >Classify</h1>
             </div>
             <div>
-              <a href="#" target = "_blank" class="btn btn-outline-dark">Join Today</a>
+              <a href="https://devpost.com/software/classify-jpkd2q?ref_content=user-portfolio&ref_feature=in_progress" target = "_blank" class="btn btn-outline-dark">Join Today</a>
             </div>
             
           </div>
@@ -199,16 +202,18 @@
                   <h1><span style = "background-color: #dc91e1"> Welcome to Classify</span></h1>
                 </div>
             </div>
-            <div class = "container">
+            <div class = "">
                 <div class = "card-body ">
                     <p class = "large-paragraph">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                      dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-                        eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+                      Classify has two components: a web application and a database login. Students 
+                      can input assignments and information in a form on our web application, which has 
+                      already been launched! Upon starting a new "study session," Classify will use 
+                      scientifically proven methods of studying to help students
+                       learn more effectively! We've also incorporated a database login system with tasks,
+                       which you can test out by checking out our Github repository. 
                     </p>
                     
-                    <a href="#" target = "_blank" class="btn btn-lg btn-outline-light">Join Today</a>
+                    <a href="https://devpost.com/software/classify-jpkd2q?ref_content=user-portfolio&ref_feature=in_progress" target = "_blank" class="btn btn-lg btn-outline-dark">Check it out</a>
                 </div>
             </div>
         </div>
@@ -267,6 +272,18 @@
                     <label  for="Low">Completing assigned homework</label>
                     
                 </div>
+
+                <div>
+                  <h5>Please select the method of studying:</h5>
+                  <hr>
+                  <div class = "form-check" > 
+                      <input type="radio" id="Pomodoro" name="Pomodoro" value = "Pomodoro" >
+                      <label  for="Pomodoro">Pomodoro</label>
+                      <br>
+                      <input type="radio" id="20" name="20" value = "20" >
+                      <label  for="20">20-20-20</label>
+                      
+                  </div>
                 <br>
             </div>
 
@@ -281,7 +298,7 @@
               
               
               </form>
-              <button class="btn btn-success" onclick="setTimeout(myFunction, 3000)">Submit</button>
+              <button class="btn btn-dark" onclick="setTimeout(myFunction, 3000)">Submit</button>
           </div>
       </div>
       </div>
@@ -292,25 +309,29 @@
 
 <!--ANOTHER SECTION-->
 <div class = "container card-deck">
-  <div class  = "card image-card">
+  <div data-aos="fade-right" data-aos-duration="1000" class  = "card image-card">
     
       
   </div>
-  <div class = "card">
+  <div data-aos="fade-left" data-aos-duration="1000"class = "card text-center">
 
     <div class = "card-header" >
       <br>
       <div class= "card-title">
-        <h2 >Results</h2>
+        <h1><span style = "background-color: purple; color: white;"> Results </span></h1>
       </div>
     </div>
 
     <div class = "card-body" >
+      <div class = "background-color: lightpink">
         <p>AP CALCULUS AB: Homework #25</p>
         <p>AP ENGLISH LANGUAGE: Rhetorical Analysis Assignment</p>
         <p>AP PHYSICS: Take and grade Exam #102 provided on the agenda.</p>
         <br>
-        <h4>You're currently STUDYING.</h4>
+      </div>
+        
+        <h4>You're currently <b>STUDYING</b>.</h4>
+        <p>We'll notify you with alerts every 20 minutes based on what you selected.</p>
     </div>
   </div>
 
