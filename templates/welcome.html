@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flask Intro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Favicon-->
+    <link rel="icon" href="favicon.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Antonio:wght@300&display=swap" rel="stylesheet">
+    
+    <!--Personal Stylesheet-->
+    <link href="static/main.css" rel="stylesheet">
+
+    <!--Icons-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  </head>
+  <style>
+    /**JUMBOTRON AND GENERAL STYLING**/
+    .site-head {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .site-head h1 {
+      font-family: 'Antonio', sans-serif;
+      margin-left: 35%;
+      font-size: 100px;
+    }
+    .site-head a {
+      margin-top: 30px;
+      margin-left: 35%;
+      
+    }
+    .down-arrow {
+      margin-top: 3.5em;
+    }
+    .card1 { 
+      background-color: #EDDCEF;
+    }
+    .card2 {
+      background-color: #CEA1D4;
+    }
+    .card3 {
+      background-color: #B56DBD;
+    }
+  </style>
+
+  <body>
+    <script>
+      AOS.init();
+    </script>
+    <div class = "text-center" > 
+      <br>
+      <nav class="navbar sticky-top navbar-expand-md">
+          <div class="mx-auto d-block flex-wrap">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav">
+
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class = "nav-item">
+                  <a class = "nav-link" href = "#">-</a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class = "nav-item">
+                  <a class = "nav-link" href = "#">-</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contact Us</a>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+      </nav>
+    </div>
+
+    <div class = "jumbotron text-center" > 
+      <div class = "card-deck container">
+        <div class = "card">
+          <div class = "card-body site-head">
+            <div class = "">
+              <h1 class = "" >Classify</h1>
+            </div>
+            <div>
+              <a href="#" target = "_blank" class="btn btn-outline-dark">Join Today</a>
+            </div>
+            
+          </div>
+          
+        </div>
+        <div class = "card">
+
+          <img class = "img-fluid"  src ="static/Images/main.png">
+        </div> 
+      </div>
+      
+      <img class= "img-fluid down-arrow" width = "30" src = "static/Images/down.png">
+    </div>
+
+  <div class = "container">
+    <div class = "card"> 
+      <div class = "card-header">
+        <div class = "card-title text-center">
+            <h2 >A new way to learn</h2>
+        </div>
+      </div>
+    </div>
+    <!---------------------->
+    <div data-aos="flip-up" data-aos-duration="1000"  class = "card-deck">
+      <div class = "card card1">
+        <div class = "card-body">
+          <p>Reason 1</p>
+        </div>
+      </div>
+    
+    <!---------------------->
+    
+      <div class = "card card2">
+        <div class = "card-body">
+          <p>Reason 2</p>
+        </div>
+      </div>
+    <!---------------------->
+    
+      <div class = "card card3">
+        <div class = "card-body">
+          <p>Reason 3</p>
+        </div>
+      </div>
+  </div>
+  <br>
+    <div class = "container">
+      <div class = "card-deck">
+        <div class = "card"> 
+            <div class = "card-header">
+                <br>
+                <div class = "card-title">
+                    <h2 class = "container">Welcome to Classify</h2>
+                </div>
+            </div>
+            <div class = "container">
+                <div class = "card-body ">
+                    <p class = "large-paragraph">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                      dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                        eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+                    </p>
+                    
+                    <a href="#" target = "_blank" class="btn btn-lg btn-outline-light">Join Today</a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            
+          <img class = "img-fluid" src= "">
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
