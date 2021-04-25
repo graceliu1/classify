@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Welcome</title>
+    <title>Classify</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Favicon-->
-    <link rel="icon" href="favicon.png">
+    <link rel="icon" href="static/Images/favicon.png">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -163,49 +163,6 @@
   </div>
   <br>
 
-  <button onClick="GFG_Fun()">
-    click here
-</button>
-<p id="GFG_DOWN"></p>
-<script>
-    var down = document.getElementById("GFG_DOWN");
-    function GFG_Fun() {
-        
-        // Create a form synamically
-        var form = document.createElement("form");
-        form.setAttribute("method", "post");
-        form.setAttribute("action", "submit.php");
-
-        // Create an input element for emailID
-        var ID = document.createElement("input");
-        ID.setAttribute("type", "text");
-        ID.setAttribute("name", "emailID");
-        ID.setAttribute("placeholder", "E-Mail ID");
-
-        // Create an input element for password
-        var PWD = document.createElement("input");
-        PWD.setAttribute("type", "password");
-        PWD.setAttribute("name", "password");
-        PWD.setAttribute("placeholder", "Password");
-
-        // Create a submit button
-        var s = document.createElement("input");
-        s.setAttribute("type", "submit");
-        s.setAttribute("value", "Submit");
-
-        // Append the email_ID input to the form
-        form.append(ID); 
-        
-        // Append the password to the form
-        form.append(PWD); 
-        
-        // Append the button to the form
-        form.append(s); 
-
-        document.getElementsByTagName("body")[0]
-       .appendChild(form);
-    }
-</script>
     <div class = "container">
       <div class = "card-deck">
         <div class = "card"> 
@@ -235,116 +192,130 @@
       </div>
     </div>
 
-    <div data-aos="fade-in" data-aos-duration="1500" class = "card bg-light">
+    <div data-aos="fade-in" data-aos-duration="1500" class = "card card1">
       <div class = "card-header">
-          <br>
+          
           <div class = "card-title">
-              <h2 class = "container">Fill out this form to get started</h2>
+            
+              <h2 style = "margin-top: 15px;">Fill out this form to get started</h2>
           </div>
       </div>
       <div class = "card-body">
           <div class = "container">
-              <form name="MathCourse" id="form1" action="/session.html">
-              <br>
+              <form name="MathCourse" id="form1" action="/welcome.html">
+              
               <!--GRADE-->
               <div>
-                  <h5>Please select your current grade:</h5>
+                  <h5>Please select your type of studying:</h5>
                   <hr>
                   <div class = "form-check" > 
-                      <input type="radio" id="grade8" name="grade" value=8 required>
-                      <label  for="grade9">Grade 8</label>
-                      <input type="radio" id="grade9" name="grade" value=9 required>
-                      <label for="grade9">Grade 9</label>
-                      <input type="radio" id="grade10" name="grade" value=10 required>
-                      <label for="grade9">Grade 10</label>
-                      <input type="radio" id="grade11" name="grade" value=11 required>
-                      <label for="grade11">Grade 11</label>
-                      <input type="radio" id="grade12" name="grade" value=12 required>
-                      <label for="grade12">Grade 12</label><br>
+                      <input type="radio" id="Review" name="Review" value = "Review" >
+                      <label  for="Review">Reviewing or prepping for exam</label>
+                      <br>
+                      <input type="radio" id="Study" name="Study" value = "Study" >
+                      <label  for="Study">Studying new material and content</label>
+                      <br>
+                      <input type="radio" id="Homework" name="Homework" value = "Homework" >
+                      <label  for="Homework">Completing assigned homework</label>
+                      <br>
+                      <input type="radio" id="Project" name="Project" value = "Project" >
+                      <label  for="Project">Working on a long-term project.</label>
                   </div>
               </div>
               <br>
+              <div>
+                <h5>Please select the priority:</h5>
+                <hr>
+                <div class = "form-check" > 
+                    <input type="radio" id="High" name="High" value = "High" >
+                    <label  for="High">High</label>
+                    <br>
+                    <input type="radio" id="Medium" name="Medium" value = "Medium" >
+                    <label  for="Medium">Medium</label>
+                    <br>
+                    <input type="radio" id="Low" name="Low" value = "Low" >
+                    <label  for="Low">Completing assigned homework</label>
+                    
+                </div>
+                <br>
+            </div>
 
-              <!--PREVIOUS COURSES-->
-              <div> 
-              <h5>Please select all of the math courses you have taken, including your current course:</h5>
-              <hr>
-              <div class = "form-check" > 
-                  <div class = "form-row">
-                      <div class = "form-group col-md-4"> 
-                          <input type="checkbox" id="Course3" name="Course3" value="Course3" >
-                          <label for="Course3"> Course 3</label><br>
-
-                          <input type="checkbox" id="Algebra1A" name="Algebra1A" value="Algebra1A" >
-                          <label for="Algebra1A"> Algebra 1A </label><br>
-
-                          <input type="checkbox" id="Algebra1" name="Algebra1" value="Algebra1" >
-                          <label for="Algebra1"> Algebra 1 </label><br>
-                          
-                          <input type="checkbox" id="AdvancedAlgebra" name="AdvancedAlgebra" value="AdvancedAlgebra" >
-                          <label for="AdvancedAlgebra"> Advanced Algebra </label><br>
-                          
-                          <input type="checkbox" id="Geometry" name="Geometry" value="Geometry" >
-                          <label for="Geometry"> Geometry</label><br>
-
-                          <input type="checkbox" id="AdvancedGeometry" name="AdvancedGeometry" value="AdvancedGeometry" >
-                          <label for="AdvancedGeometry"> Advanced Geometry </label><br>
-                          
-                          <input type="checkbox" id="Algebra2" name="Algebra2" value="Algebra2" >
-                          <label for="Algebra2"> Algebra 2 </label><br>
-                          
-                          <input type="checkbox" id="AdvancedAlgebra2" name="AdvancedAlgebra2" value="AdvancedAlgebra2" >
-                          <label for="AdvancedAlgebra2"> Advanced Algebra 2 </label><br>
-                          <!--
-                          <input type="checkbox" id="AdvAlgebra2" name="AdvAlgebra2" value="AdvAlgebra2" >
-                          <label for="AdvAlgebra2"> Adv. Algebra 2 </label><br>-->
-                      </div> 
-                      <div class = "form-group col-md-4"> 
-                          <input type="checkbox" id="Statistics" name="Statistics" value="Statistics" >
-                          <label for="Statistics"> Statistics </label><br>
-                          
-                          <input type="checkbox" id="Trigonometry" name="Trigonometry" value="Trigonometry" >
-                          <label for="Trigonometry"> Trigonometry </label><br>
-                          
-                          <input type="checkbox" id="PreCalculus" name="PreCalculus" value="PreCalculus" >
-                          <label for="PreCalculus"> PreCalculus </label><br>
-                          
-                          <input type="checkbox" id="PersonalFinance" name="PersonalFinance" value="PersonalFinance" >
-                          <label for="PersonalFinance"> Personal Finance </label><br>
-                          
-                          <input type="checkbox" id="Calculus" name="Calculus" value="Calculus" >
-                          <label for="Calculus"> Calculus </label><br>
-
-                          <input type="checkbox" id="APstatistics" name="APstatistics" value="APstatistics">
-                          <label for="APstatistics"> AP Statistics </label><br>
-                          
-                          <input type="checkbox" id="APCalculusAB" name="APCalculusAB" value="APCalculusAB" >
-                          <label for="APCalculusAB"> AP Calculus AB </label><br>
-                          
-                          <input type="checkbox" id="APCalculusBC" name="APCalculusBC" value="APCalculusBC" >
-                          <label for="APCalculusBC"> AP Calculus BC </label><br>
-                      </div>
-                  </div>
-              </div>
-              </div>
-              <br>
               
               <!--ALERT AND BUTTONS-->
                 
               <div class="alert alert-warning col-md-6 " role="alert">
-                  You must click <strong>"Submit"</strong> or <strong>"Reset"</strong> 
+                  You must click <strong>"Submit"</strong> 
                   each time you fill out this form. 
               </div>
 
-              <input class="btn btn-success" type="submit" value="Submit" >
-              <input class="btn btn-danger"  type="reset" >
+              
               
               </form>
+              <button class="btn btn-success" onclick="setTimeout(myFunction, 3000)">Submit</button>
           </div>
       </div>
       <br>
       <br>
   </div>
+<br>
+  <div class = "card card2 container" >
 
+    <div class = "card-header" >
+      <br>
+      <div class= "card-title">
+        <h2 >Results</h2>
+      </div>
+    </div>
+
+    <div class = "card-body" >
+        <p>AP CALCULUS AB: Homework #25</p>
+        <p>AP ENGLISH LANGUAGE: Rhetorical Analysis Assignment</p>
+        <p>AP PHYSICS: Take and grade Exam #102 provided on the agenda.</p>
+        <br>
+        <h4>You're currently STUDYING.</h4>
+      </div>
+    </div>
+
+<script>
+function myFunction() {
+  alert('It has been twenty minutes! The Pomodoro method of studying says that you should take a break now and stretch.');
+}
+</script>
+
+<!--
+<div id="ten-countdown" onclick = "countdown( "ten-countdown", 10, 0 )"></div>-->
+
+<!--
+<script>
+function countdown( elementName, minutes, seconds )
+{
+    var element, endTime, hours, mins, msLeft, time;
+
+    function twoDigits( n )
+    {
+        return (n <= 9 ? "0" + n : n);
+    }
+
+    function updateTimer()
+    {
+        msLeft = endTime - (+new Date);
+        if ( msLeft < 1000 ) {
+            element.innerHTML = "Time is up!";
+        } else {
+            time = new Date( msLeft );
+            hours = time.getUTCHours();
+            mins = time.getUTCMinutes();
+            element.innerHTML = (hours ? hours + ':' + twoDigits( mins ) : mins) + ':' + twoDigits( time.getUTCSeconds() );
+            setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
+        }
+    }
+
+    element = document.getElementById( elementName );
+    endTime = (+new Date) + 1000 * (60*minutes + seconds) + 500;
+    updateTimer();
+}
+</script>-->
+
+<br><br>
   </body>
 </html>

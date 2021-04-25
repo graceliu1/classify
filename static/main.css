@@ -141,7 +141,7 @@ nav .social-link {
 /*****************/
 /**BUTTON CODE*******/
    
-.btn {
+.btn, button {
     display: inline-flex ;
     height: 40px;
     padding-right: 25px;
